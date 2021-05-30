@@ -477,6 +477,30 @@ button a
     margin-bottom: 10px;
 }
 
+/* Cookies button */
+
+#cajacookies 
+{
+    background-color: rgb(142, 163, 195);
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+  
+#cajacookies button 
+{
+    background-color: rgb(221, 102, 4);
+    color: #fff;
+    padding: 5px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+
 /* Media Query config */
 
 
