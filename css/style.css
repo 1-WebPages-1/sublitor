@@ -72,8 +72,9 @@
 
     /* default size's */
 
-    --Def_pre_Size-W: 100%;
-    --Def_pre_Size-H: 100%;
+    --Def_pre_Size-W: 80%;
+    --Def_pre_Size-H: 50vh;
+    --Def_pre_Size-H-med:40vh;
 
     /* Especific Size's */
 
@@ -123,6 +124,10 @@
     --Space-Btw-Prod: 10px 10px;
     --Pad-Prod: 10px;
     --Prod-Card-Color: #bebebe;
+
+    /* Social icons */
+
+    --Social_Links-Title: 3rem;
 
     /* footer modifications */
 
@@ -326,8 +331,8 @@ button
 /* Banner Type 2 */
 .Tp2
 {
-    width: var(--Def_pre_Size-W) !;
-    height: var(--Def_pre_Size-H);
+    width: var(--Def_pre_Size-W);
+    height: var(--Def_pre_Size-H-med);
     background-image: url('../assets/banners/computer/984x334-banner-for-COMP-medium.png');
 }
 
@@ -366,6 +371,28 @@ button
     text-align: center;
     margin-bottom: 20px;
 }
+
+/* Social icons */
+
+.Social-i-Container
+{
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+    line-height: 50px;
+}
+
+.Social-i-Title
+{
+    font-size: var(--Social_Links-Title);
+}
+
+.Social-i-Container li
+{
+    display: inline-block;
+}
+
+/* Footer things */
 
 .footer
 {
@@ -423,7 +450,7 @@ button
     .Tp2
     {
         width: var(--Def_pre_Size-W);
-        height: var(--Def_pre_Size-H);
+        height: var(--Def_pre_Size-H-med);
         background-image: url('../assets/banners/tablet/728x210-mid-img.png');
     }
 
@@ -495,7 +522,7 @@ button
     .Tp2
     {
         width: var(--Def_pre_Size-W);
-        height: var(--Def_pre_Size-H);
+        height: var(--Def_pre_Size-H-med);
         background-image: url('../assets/banners/mobile/300x130-mid-img-mob.png');
     }
 
