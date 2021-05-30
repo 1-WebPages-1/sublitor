@@ -25,19 +25,17 @@
 
     --LI-Sty: none;
     --A-Sty: none;
+    --Col-link-hover: #BD8634;
 
     /* Overflow default */
 
     --Ov-X: none;
     --Ov-Y: block;
 
-    /* Box Shadow & background */
+    /* Some default decoration style's */
 
     --Box-def-Background: red;
     --Box-Shadow-Def: 0 0 10px #000;
-
-    /* default Border & Border Radius for everything */
-
     --Border-Def: #000 1px solid;
     --Bord-Rad-def: 12px;
 
@@ -56,23 +54,23 @@
     --Padd-btn: 10px;
     --Bord-btn: 1px solid black;
     --BordRad-btn: 15px;
-    --background-btn: #fff;
-    --Tcol-btn: #000;
+    --background-btn: #000;
+    --Tcol-btn: #fff;
 
-    /* Product-Card size's */
-    --Prod-Width: 300px;
-    --Prod-height: 370px;
+    /* Type2 button style */
 
-    /* Mobile prod size */
-
-    --Prod-Width_mob: 280px;
-    --Prod-height_mob: 350px;
+    --Padd-btn2: 14px;
+    --Bord-btn2: 1px solid #fff;
+    --BordRad-btn2: 15px;
+    --background-btn2: rgba(10, 10, 10, 0.342);
+    --Tcol-btn2: #fff;
 
     /* Banners big and medium, default size */
 
     /* default size's */
 
-    --Def_pre_Size-W: 80%;
+    --Def_pre_Size-W: 100%;
+    --Def_pre_Size-W2: 80%;
     --Def_pre_Size-H: 50vh;
     --Def_pre_Size-H-med:40vh;
 
@@ -82,7 +80,7 @@
 
     /* BIGGER */
     --Comp_big_width: 984px;
-    --Comp_big_height: 500px;
+    --Comp_big_height: 700px;
 
     /* MEDIUM */
     --Comp_med_width: 984px;
@@ -123,7 +121,20 @@
 
     --Space-Btw-Prod: 10px 10px;
     --Pad-Prod: 10px;
-    --Prod-Card-Color: #bebebe;
+    --Margin-bet-Prod: 10px auto;
+    --Prod-Card-Color: #33455c;
+    --Col-Prod-text: #fff;
+    --Prod-font-Size-Title: 2.3rem;
+
+    /* Product-Card size's */
+    --Prod-Width: 300px;
+    --Prod-height: 400px;
+
+    /* Mobile prod size */
+
+    --Prod-Width_mob: 280px;
+    --Prod-height_mob: 380px;
+
 
     /* Social icons */
 
@@ -201,6 +212,7 @@ a
 a:hover
 {
     text-decoration:underline;
+    color: var(--Col-link-hover);
 }
 
 ul
@@ -218,12 +230,25 @@ button
 {
     padding: var(--Padd-btn);
     background-color:var(--background-btn);
-    color: var(--Tcol-btn);
     font-size: var(--A-Size);
     border-radius: var(--BordRad-btn);
     border: var(--Bord-btn);
     outline: none;
     cursor: pointer;
+}
+
+.Btn-Sty
+{
+    padding: var(--Padd-btn2);
+    background-color:var(--background-btn2);
+    border-radius: var(--BordRad-btn2);
+    border: var(--Bord-btn2);
+    outline: none;
+}
+
+button a
+{
+    color: var(--Tcol-btn);
 }
 
 /* Website header */
@@ -302,16 +327,19 @@ button
 .C-Bn
 {
     width: var(--Def_pre_Size-W);
-    height: var(--Def_pre_Size-H);
-    background-image: url('../assets/banners/computer/984x500-banner-COMP-for-home.png');
+    height: var(--Comp_big_height);
+    background-image: url('../assets/banners/computer/normal-promo-banners/984x500-banner.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    margin: 50px auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: ". . . . ."
+                         ". . . . ."
+                         ". . . . ."
                          ". text text text ."
                          ". . . . ."
 }
@@ -328,12 +356,19 @@ button
     color: var(--Ban-Col);
 }
 
+.C-Bn-Title
+{
+    font-size: 4rem;
+    text-shadow: 0 0 10px #000;
+    margin: 10px auto;
+}
+
 /* Banner Type 2 */
 .Tp2
 {
-    width: var(--Def_pre_Size-W);
-    height: var(--Def_pre_Size-H-med);
-    background-image: url('../assets/banners/computer/984x334-banner-for-COMP-medium.png');
+    width: var(--Def_pre_Size-W2);
+    height: var(--Comp_med_height);
+    background-image: url('../assets/banners/computer/normal-promo-banners/mid-banner-comp-sublitor-sublimados-y-remeras-personalizadas.jpg');
 }
 
 /* Products */
@@ -341,6 +376,7 @@ button
 .Prod-cont
 {
     text-align: center;
+    margin: 50px auto;
 }
 
 .Prod
@@ -351,6 +387,14 @@ button
     margin: var(--Space-Btw-Prod);
     padding: var(--Pad-Prod);
     background-color: var(--Prod-Card-Color);
+    box-shadow: var(--Box-Shadow-Def);
+}
+
+.Prod-text
+{
+    font-size: var(--Prod-font-Size-Title);
+    color: var(--Col-Prod-text);
+    margin: var(--Margin-bet-Prod);
 }
 
 .Prod img
@@ -390,6 +434,7 @@ button
 .Social-i-Container li
 {
     display: inline-block;
+    margin: 0 5px;
 }
 
 /* Footer things */
@@ -441,7 +486,7 @@ button
     {
         width: var(--Def_pre_Size-W);
         height: var(--Def_pre_Size-H);
-        background-image: url('../assets/banners/tablet/728x350px-bigger-img.png');
+        background-image: url('../assets/banners/tablet/promo-banner/728x350-banner.png');
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: ". . ."
                              "text text text"
@@ -449,9 +494,9 @@ button
     }
     .Tp2
     {
-        width: var(--Def_pre_Size-W);
+        width: var(--Def_pre_Size-W2);
         height: var(--Def_pre_Size-H-med);
-        background-image: url('../assets/banners/tablet/728x210-mid-img.png');
+        background-image: url('../assets/banners/tablet/promo-banner/mid-banner-tablet-sublitor-sublimados-y-remeras-personalizadas.jpg');
     }
 
     /* Menu Icon */
@@ -466,6 +511,7 @@ button
         padding: 15px;
         border: 3px solid black;
         background-color: white;
+        z-index: 9;
     }
 
     .M-fixed
@@ -517,13 +563,13 @@ button
     {
         width: var(--Def_pre_Size-W);
         height: var(--Def_pre_Size-H);
-        background-image: url('../assets/banners/mobile/300x190-bigger-banner.png');
+        background-image: url('../assets/banners/mobile/promo-banner/300x190-banner-mobile.png');
     }
     .Tp2
     {
         width: var(--Def_pre_Size-W);
         height: var(--Def_pre_Size-H-med);
-        background-image: url('../assets/banners/mobile/300x130-mid-img-mob.png');
+        background-image: url('../assets/banners/mobile/promo-banner/mid-banner-mobile-sublitor-sublimados-y-remeras-personalizadas.jpg');
     }
 
     .nav-container
