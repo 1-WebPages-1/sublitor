@@ -4,9 +4,6 @@ document.querySelector('.M-Icon-Container').addEventListener('click', () =>
     document.querySelector('.nav-container').classList.toggle('show')
   });
 
-
-/*
-
  Cookies
 function compruebaAceptaCookies() {
     if(localStorage.aceptaCookies == 'true'){
@@ -22,4 +19,4 @@ function compruebaAceptaCookies() {
   $(document).ready(function () {
     compruebaAceptaCookies();
 });
-   */
+  
