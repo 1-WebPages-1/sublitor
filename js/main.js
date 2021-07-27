@@ -52,4 +52,14 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 
+// Efectos de scroll
+// window.addEventListener('scroll', function(){
+//   let animacion = this.document.querySelectorAll('animado');
+//   let posicionObj1 = animacion.getBoundingClientRect().top;
+//   console.log(posicionObj1);
+//   let tamañoDePantalla = window.innerHeight/3;
 
+//   if(posicionObj1 < tamañoDePantalla){
+//       animacion.style.animation = "mover 1s ease-out"
+//   }
+// });

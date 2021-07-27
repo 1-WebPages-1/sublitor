@@ -342,7 +342,7 @@ button a
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: ". . . . ."
                          ". text text text ."
-                         ". . . . ."
+                         ". . . . .";
 }
 
 .Ban-Text-I-container

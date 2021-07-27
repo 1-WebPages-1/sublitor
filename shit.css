@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: #000;
+}
+
+img{
+    width: 300px;
+}
+
+h1,h2,h3,h4,p,span,a{
+    color:#fff;
+}
+
+h1{
+    font-size: 2.3rem;
+}
+h2{
+    font-size:2.1rem;
+}
+h3{
+    font-size:1.9rem;
+}
+h4{
+    font-size: 1.7rem;
+}
+
+p,span,a{
+    font-size:1.6rem;
+}
+
+
+#particles-js{
+    height:100vh;
+    width:100%;
+    position:fixed;
+    z-index:-1;
+}
+
+.allContainer{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.438);
+    z-index: 11;
+}
+/* resto de configuraciones de la página */
+.bigbanner{
+    width: 100%;
+    height: 50vh;
+    /* background-image: url(''); */
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". . . . ."
+                         ". . . . ."
+                         ". texto texto texto ."
+                         ". . button . ."
+                         ". . . . .";
+}
+
+.text-banner{
+    grid-area:texto;
+    margin: auto;
+}
+
+.banner-button{
+    grid-area: button;
+    background: #548bd3;
+    color:#fff;
+    font-size:1.6rem;
+    outline:none;
+    border:2px solid #fff;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* Productos */
+
+.products{
+    background-color:red;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.product{
+    display:block;
+    width: 320px;
+    height: 350px;
+    background: rgb(20, 80, 177);
+    border: 2px solid black;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 5px 0 5px;
+}
+.product img{
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.product-button{
+    background: #54d354;
+    color:#fff;
+    font-size:1.6rem;
+    outline:none;
+    border:2px solid #fff;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 0 auto;
+}
