@@ -1,12 +1,7 @@
-
-
-
-
-
-
-
-
-
+/* menu */
+document.querySelector('.mobile-menu').addEventListener('click', () => {
+  document.querySelector('.menu').classList.toggle('show')
+});
 
 /* Particulas para el fondo de la web */
 particlesJS(
@@ -121,3 +116,64 @@ particlesJS(
         "retina_detect": true
       }
 );
+
+/* para animaciones */
+let animadoArriba = document.querySelectorAll(".animadoArriba");
+function mostrarScroll1(){
+  let scrollTop = document.documentElement.scrollTop;
+  for(var i = 0; i < animadoArriba.length; i++){
+    let alturaAnimado = animadoArriba[i].offsetTop;
+    if(alturaAnimado -450 < scrollTop){
+      animadoArriba[i].style.opacity = 1;
+      animadoArriba[i].classList.add("mostraArriba");
+    }
+  }
+}
+
+let animadoAbajo = document.querySelectorAll(".animadoAbajo");
+function mostrarScroll2(){
+  let scrollTop = document.documentElement.scrollTop;
+  for(var i = 0; i < animadoAbajo.length; i++){
+    let alturaAnimado = animadoAbajo[i].offsetTop;
+    if(alturaAnimado -450 < scrollTop){
+      animadoAbajo[i].style.opacity = 1;
+      animadoAbajo[i].classList.add("mostraAbajo");
+    }
+  }
+}
+
+let animadoDerecha = document.querySelectorAll(".animadoDerecha");
+function mostrarScroll3(){
+  let scrollTop = document.documentElement.scrollTop;
+  for(var i = 0; i < animadoDerecha.length; i++){
+    let alturaAnimado = animadoDerecha[i].offsetTop;
+    if(alturaAnimado -450 < scrollTop){
+      animadoDerecha[i].style.opacity = 1;
+      animadoDerecha[i].classList.add("mostraDerecha");
+    }
+  }
+}
+
+let animadoIzquierda = document.querySelectorAll(".animadoIzquierda");
+function mostrarScroll4(){
+  let scrollTop = document.documentElement.scrollTop;
+  for(var i = 0; i < animadoIzquierda.length; i++){
+    let alturaAnimado = animadoIzquierda[i].offsetTop;
+    if(alturaAnimado -450 < scrollTop){
+      animadoIzquierda[i].style.opacity = 1;
+      animadoIzquierda[i].classList.add("mostraIzquierda");
+    }
+  }
+}
+/* animacion del banner del inicio */
+function mostrarAnimacionBan(){
+  let animadoDerechaBanner = document.getElementById("animadoDerechaBanner");
+  animadoDerechaBanner.style.opacity = 1;
+  animadoDerechaBanner.classList.add("mostraDerecha");
+}
+
+window.addEventListener('scroll', mostrarScroll1);
+window.addEventListener('scroll', mostrarScroll2);
+window.addEventListener('scroll', mostrarScroll3);
+window.addEventListener('scroll', mostrarScroll4);
+window.addEventListener('load', mostrarAnimacionBan);
