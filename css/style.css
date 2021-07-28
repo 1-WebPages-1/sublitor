@@ -167,6 +167,9 @@ li{
     padding: 10px;
     margin: 0 auto;
 }
+.product-price-card{
+    color: #00bb2d;
+}
 
 a.linkMasProductos{
     font-size: 30px;
